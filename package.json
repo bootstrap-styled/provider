@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-provider",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "providers",
   "main": "lib/index.js",
   "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
@@ -212,14 +212,11 @@
     "react-dom": "^16.4.0",
     "styled-components": "^3.3.0"
   },
-  "publishConfig": {
-    "tag": "latest"
-  },
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -294,5 +291,5 @@
   },
   "declinationId": "bs",
   "contributor": [],
-  "private": true
+  "private": false
 }
