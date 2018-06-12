@@ -1,9 +1,9 @@
 {
-  "name": "@yeutech/providers",
+  "name": "bootstrap-styled-provider",
   "version": "0.0.0-development",
   "description": "providers",
   "main": "lib/index.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/providers",
+  "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/providers.git"
+    "url": "ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/bootstrap-styled-provider.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/providers/issues"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/issues"
   },
   "keywords": [
     "bootstrap",
@@ -46,7 +46,7 @@
     "yeutech.vn",
     "providers"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -193,7 +193,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
-    "rollup-umd-scripts": "^0.9.14",
+    "rollup-umd-scripts": "^0.9.21",
     "rollup-watch": "^4.3.1",
     "semantic-release": "^15.5.0",
     "sinon": "^2.3.2",
@@ -211,10 +211,6 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "styled-components": "^3.3.0"
-  },
-  "publishConfig": {
-    "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
   },
   "release": {
     "branch": "master",
