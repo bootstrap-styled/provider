@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2018-06-12)
+
+
+### Bug Fixes
+
+* **ci:** restore release step in .gitlab-ci.yml ([e9d9943](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/e9d9943))
+* **ci:** update rollup-umd-scripts to 0.9.21 ([747a947](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/747a947))
+* **ci:** using https for repository.url and restore publishConfig.tag = latest ([fd2ca95](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/fd2ca95))
+
 <a name="1.0.32"></a>
 ## [1.0.32](https://module.kopaxgroup.com:20024/dev-tools/rollup-umd/compare/v1.0.31...v1.0.32) (2018-06-09)
 
