@@ -29,6 +29,10 @@
       ]
     },
     {
+      "name": "UI Components",
+      "content": "docs/ui.md"
+    },
+    {
       "name": "FAQ",
       "content": "docs/faq.md"
     },
@@ -52,7 +56,7 @@
     }
   ],
   "ribbon": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/providers",
+    "url": "https://module.kopaxgroup.com/styled-components/bootstrap-styled-provider",
     "text": "Fork us on GitLab"
   }
 }
