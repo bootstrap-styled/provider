@@ -1,9 +1,9 @@
 {
-  "name": "providers",
+  "name": "bootstrap-styled-provider",
   "version": "0.0.0-development",
   "description": "providers",
   "main": "lib/index.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/providers",
+  "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/providers.git"
+    "url": "ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/bootstrap-styled-provider.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/providers/issues"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/issues"
   },
   "keywords": [
     "bootstrap",
