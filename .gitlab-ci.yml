@@ -77,7 +77,16 @@ test:
 release:
   stage: release
   script:
-    - npx -p rollup-umd-scripts scripts-ci release
+    # if it's transitive, then it means we are publishing to public
+    - '[ "$(npx rollup-umd-scripts publish status)" = "transitive" ] && exit 0'
+    - npx semantic-release
+    # Will trigger the doc build using the newly created tag
+    - '[[ -f ~/release_version ]] && RELEASE_VERSION=v$(cat ~/release_version) || exit 0'
+    - 'JSON_RES=$(curl -f -sS -X POST -H "PRIVATE-TOKEN: ${GITLAB_TOKEN:-$GL_TOKEN}" -F description=ci-auto-created https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/triggers)'
+    - TRIGGER_TOKEN=$(echo $JSON_RES | jq -r '.token') && TRIGGER_ID=$(echo $JSON_RES | jq -r '.id')
+    - sleep 3s
+    - 'curl -f -o /dev/null -S -X POST -F token=${TRIGGER_TOKEN} -F ref=${RELEASE_VERSION} -F "variables[NPM_TOKEN]=${NPM_TOKEN}" -F "variables[NPM_TOKEN_KOPAXGROUP]=${NPM_TOKEN_KOPAXGROUP}" https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/trigger/pipeline'
+    - 'curl -f -S -X DELETE -H "PRIVATE-TOKEN: ${GITLAB_TOKEN:-$GL_TOKEN}" "https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/triggers/${TRIGGER_ID}"'
   dependencies:
     - build
   only:
