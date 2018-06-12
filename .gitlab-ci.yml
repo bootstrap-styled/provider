@@ -1,40 +1,7 @@
 image: kopaxgroup/node10-jdk8-flyway4-sonarscanner2-docker17-debian
 
 before_script:
-  # Use SSH if a SSH_PRIVATE_KEY is configured
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && GIT_STRATEGY=none'
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && { which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y ) }'
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && eval $(ssh-agent -s)'
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && ssh-add <(echo "$SSH_PRIVATE_KEY")'
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && mkdir -p ~/.ssh'
-  - '[[ -v "SSH_PRIVATE_KEY" ]] && [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-
-  # commit message
-  - git config --global user.email "contact@kopaxgroup.com"
-  - git config --global user.name "Gitlab-CI"
-
-  # clone
-  - "[[ ! -e '.git/config' ]] && git clone ${REPOSITORY_SSH_URL} ."
-  - git checkout ${CI_COMMIT_SHA}
-
-  # const
-  - export PACKAGE_NAME=$(node -p "require('./package.json').name")
-  - export PACKAGE_VERSION=$(node -p "require('./package.json').version")
-  - export DECLINATION_ID=$(node -p "require('./package.json').declinationId")
-  - export SONAR_VERSION=${PACKAGE_VERSION}-b${CI_PIPELINE_ID}-${CI_COMMIT_REF_NAME}
-  - export NODE_VERSION=$(node --version)
-  - export NPM_VERSION=$(npm --version)
-  - export NPM_REGISTRY=$(node -p "var { publishConfig } = require('./package.json'); publishConfig && publishConfig.registry || 'https://registry.npmjs.org'")
-
-  # logging
-  - npm --version
-  - node --version
-  - echo "package version $PACKAGE_VERSION"
-
-  # env
-  - "[[ $NPM_REGISTRY = https://npm.kopaxgroup.com* ]] && [[ -v \"NPM_TOKEN_KOPAXGROUP\" ]] && NPM_TOKEN=${NPM_TOKEN_KOPAXGROUP}"
-  - shopt -s extglob; echo "//${NPM_REGISTRY#http?(s)://}/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-  - npm set registry ${NPM_REGISTRY}
+  - npx -p rollup-umd-scripts scripts-ci before-script
 
 stages:
   - build
@@ -46,8 +13,7 @@ stages:
 build:
   stage: build
   script:
-    - npm install
-    - npm run build
+    - npx -p rollup-umd-scripts scripts-ci build
   cache:
     key: ${CI_BUILD_REF_NAME}
     paths:
@@ -61,6 +27,7 @@ build:
       - .
   only:
     - dev
+    - tags
     - master
   tags:
     - docker
@@ -70,13 +37,12 @@ test:
   stage: test
   coverage: '/All files[^|]*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*([\d.]*)\s*\|\s*/'
   script:
-    - npm run test
-    # we skip that command for tags, they do not use SSH_PRIVATE_KEY nor any of the sonar env
-    - '[[ -v "SSH_PRIVATE_KEY" ]] && sonar-scanner -Dsonar.host.url="${SONAR_URL}" -Dsonar.login="${SONAR_LOGIN}" -Dsonar.branch="${CI_COMMIT_REF_NAME}" -Dsonar.projectVersion="${SONAR_VERSION}" || true'
+    - npx -p rollup-umd-scripts scripts-ci test
   dependencies:
     - build
   only:
     - dev
+    - tags
     - master
   tags:
     - docker
@@ -100,7 +66,7 @@ test:
   dependencies:
     - build
   script:
-    - npm test
+    - npx -p rollup-umd-scripts scripts-ci test
   only:
     - dev
     - master
@@ -111,16 +77,7 @@ test:
 release:
   stage: release
   script:
-    # if it's transitive, then it means we are publishing to public
-    - '[ "$(npx rollup-umd-scripts publish status)" = "transitive" ] && exit 0'
-    - npx semantic-release
-    # Will trigger the doc build using the newly created tag
-    - '[[ -f ~/release_version ]] && RELEASE_VERSION=v$(cat ~/release_version) || exit 0'
-    - 'JSON_RES=$(curl -f -sS -X POST -H "PRIVATE-TOKEN: ${GITLAB_TOKEN:-$GL_TOKEN}" -F description=ci-auto-created https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/triggers)'
-    - TRIGGER_TOKEN=$(echo $JSON_RES | jq -r '.token') && TRIGGER_ID=$(echo $JSON_RES | jq -r '.id')
-    - sleep 3s
-    - 'curl -f -o /dev/null -S -X POST -F token=${TRIGGER_TOKEN} -F ref=${RELEASE_VERSION} https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/trigger/pipeline'
-    - 'curl -f -S -X DELETE -H "PRIVATE-TOKEN: ${GITLAB_TOKEN:-$GL_TOKEN}" "https://module.kopaxgroup.com/api/v4/projects/${CI_PROJECT_ID}/triggers/${TRIGGER_ID}"'
+    - npx -p rollup-umd-scripts scripts-ci release
   dependencies:
     - build
   only:
