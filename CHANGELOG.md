@@ -1,3 +1,11 @@
+## [1.1.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.0...v1.1.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **package.json:** conflict with amster ([1d0b278](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/1d0b278))
+* **reset:** reset was existing at the end of the css of utility provider ([fd9e714](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/fd9e714))
+
 # [1.1.0](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.1...v1.1.0) (2018-06-13)
 
 
