@@ -5,6 +5,7 @@
     "**/*.spec.{js,jsx,ts,tsx}",
     "**/*.d.ts"
   ],
+  "components": "src/**/[A-Z]*.js",
   "sections": [
     {
       "name": "Introduction",
