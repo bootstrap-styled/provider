@@ -1,3 +1,10 @@
+# [1.1.0](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.1...v1.1.0) (2018-06-13)
+
+
+### Features
+
+* **reset:** added reset props, setting false default for injectGlobal and reset ([837cd50](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/837cd50))
+
 ## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.0...v1.0.1) (2018-06-13)
 
 
