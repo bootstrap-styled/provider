@@ -1,3 +1,12 @@
+## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.0...v1.0.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **ci:** fix ci ([6ec4456](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/6ec4456))
+* **ci:** fix ci ([e58b283](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/e58b283))
+* **ci:** fix ci ([162c9ed](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/162c9ed))
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-06-12)
 
