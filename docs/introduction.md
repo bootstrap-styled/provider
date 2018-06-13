@@ -7,8 +7,4 @@
 ![image](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![image]($IMG_SHIELD_PUBLISHING)
 
-$PACKAGE_NAME package is TODO.
-
-```html
-<strong>Contribute to improve our documentation, it support HTML, React and Markdown!</strong>
-```
+$PACKAGE_NAME contains BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities

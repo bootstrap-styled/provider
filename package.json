@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-styled-provider",
-  "version": "0.0.0-development",
-  "description": "providers",
+  "version": "1.1.0",
+  "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
   "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
@@ -13,7 +13,7 @@
     "prebuild": "npm run build:clean",
     "build": "npm run build:lib && npm run build:dist",
     "prebuild:lib": "rimraf lib/*",
-    "build:lib": "BABEL_ENV=production babel --out-dir lib src",
+    "build:lib": "BABEL_ENV=production babel --out-dir lib src --copy-files",
     "prebuild:dist": "rimraf dist/*",
     "build:clean": "rimraf lib/* dist/*",
     "build:dist:dev": "rollup -c",
@@ -193,7 +193,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
-    "rollup-umd-scripts": "^0.9.21",
+    "rollup-umd-scripts": "^0.9.30",
     "rollup-watch": "^4.3.1",
     "semantic-release": "^15.5.0",
     "sinon": "^2.3.2",
@@ -203,6 +203,7 @@
   },
   "dependencies": {
     "bootstrap-styled": "^1.6.5",
+    "bootstrap-styled-mixins": "^1.0.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.1"
@@ -212,14 +213,11 @@
     "react-dom": "^16.4.0",
     "styled-components": "^3.3.0"
   },
-  "publishConfig": {
-    "tag": "latest"
-  },
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -276,7 +274,7 @@
     "coverageThreshold": {
       "global": {
         "statements": 50,
-        "branches": 50,
+        "branches": 18,
         "functions": 50,
         "lines": 50
       }
@@ -294,5 +292,5 @@
   },
   "declinationId": "bs",
   "contributor": [],
-  "private": true
+  "private": false
 }

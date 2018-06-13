@@ -1,24 +1,18 @@
-Like every [rollup-umd](dev-tools.yeutech.com/rollup-umd) project $PACKAGE_NAME provide two distribution:
- 
-1. `dist` folder with all the javascript bundled in one file. You will have a UMD and ES5 file.
-1. `lib` folder that just contain the ES6 transpiled in ES5.
+**BootstrapProvider**
 
-Whenever you use $PACKAGE_NAME, you need to import the one appropriate to your environment (node or browser).
+It contain the following features:
 
-If you are building a distributed package in a node environment, you want to prevent bundling the whole library you are importing (if made with rollup-umd).
+- [Reset css by Eric Meyer](https://meyerweb.com/eric/tools/css/reset/)
+- Global styles (`body`, `font-family`, `background`, etc...) using `$theme`.
+- styled-components [`<ThemeProvider />`](https://www.styled-components.com/docs/api#themeprovider)
+- IE8 browser JS fixes =).
+- The default `$theme` from [Bootstrap original](https://getbootstrap.com/).
+- The default bootstrap-styled `makeTheme` preprocessor using also bootstrap original theme variable calc.
+- Meta-data support (with `_`).
+- Scoped theme detection.
+- Include by default the `<UtilityProvider />`.
 
-To do so, always import from `lib`.
- 
-This is correct:
+**UtilityProvider**
 
-```js static
-import myLib from '$PACKAGE_NAME/lib';
-```
-
-This is wrong:
-
-```js static
-import myLib from '$PACKAGE_NAME';
-```
-
-If you are a developer, you want to read more [here](http://dev-tools.yeutech.com/rollup-umd/#distribution).
+- [Bootstrap original CSS utilities](https://getbootstrap.com/docs/4.1/utilities/borders/)
+- Configurable utilities.

@@ -61,8 +61,8 @@ const plugins = [
   commonjs({
     include: 'node_modules/**',
     namedExports: {
-      'node_modules/bootstrap-styled/lib/theme/index.js': [ 'makeTheme' ]
-    }
+      'node_modules/bootstrap-styled/lib/theme/index.js': ['makeTheme'],
+    },
   }),
   replace({
     'process.env.NODE_ENV': JSON.stringify(prod ? 'production' : 'development'),
