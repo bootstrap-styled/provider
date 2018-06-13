@@ -6,7 +6,7 @@ import BootstrapProvider from '../index';
 const children = (<h1>Test</h1>);
 
 const renderComponent = (props = {}) => mount( // eslint-disable-line function-paren-newline
-  <BootstrapProvider theme={props.theme}>
+  <BootstrapProvider theme={props.theme} injectGlobal={false} reset={false}>
     {props.children}
   </BootstrapProvider>
 ); // eslint-disable-line function-paren-newline

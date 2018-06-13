@@ -1,5 +1,31 @@
 The `<BootstrapProvider />` component allows you to configure the styling of all your components and to toggle global options. You are not required to use it, but we strongly suggest applying it so that you benefit of the full extent of our application.
 
+#### **Configure reset css**
+
+Every browser have slightly different css by default. If you want to reset all the CSS, you can use `reset: true`. 
+
+```jsx static
+<BootstrapProvider reset={true}>
+  <App />
+</BootstrapProvider>
+```
+
+> Use this only once in your application and before any other styled-components otherwise your stylesheet will be injected after them.  
+
+#### **Configure global css**
+
+You generally build UI component, so you don't have to maintain any css stylesheet. 
+
+You may want to inject a global configuration for your fonts and body margin, if you do, use the `injectGlobal: true`.
+
+```jsx static
+<BootstrapProvider injectGlobal={true}>
+  <App />
+</BootstrapProvider>
+```
+
+> Use this only once in your application and before any other styled-components otherwise your stylesheet will be injected after them. 
+
 #### **Overriding Variables**
 
 The theme allows you to very quickly change the value of variables associated with the CSS that builds our components.
