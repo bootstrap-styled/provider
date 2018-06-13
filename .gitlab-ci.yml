@@ -26,6 +26,7 @@ build:
     paths:
       - .
   only:
+    - ajt-dev
     - dev
     - tags
     - master
