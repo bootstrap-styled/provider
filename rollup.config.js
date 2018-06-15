@@ -26,7 +26,7 @@ const output = prod ? [
     name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.cjs.min.js`, format: 'cjs', sourcemap: true,
   },
   {
-    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.min.mjs`, format: 'es', sourcemap: true,
+    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.esm.js`, format: 'es', sourcemap: true,
   },
 ] : [
   {
@@ -36,7 +36,7 @@ const output = prod ? [
     name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.cjs.js`, format: 'cjs', sourcemap: true,
   },
   {
-    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.mjs`, format: 'es', sourcemap: true,
+    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.esm.js`, format: 'es', sourcemap: true,
   },
 ];
 
@@ -57,8 +57,6 @@ const plugins = [
   builtins(),
   nodeResolve({
     browser: true,
-    module: true,
-    modulesOnly: true,
   }),
   commonjs({
     include: 'node_modules/**',
