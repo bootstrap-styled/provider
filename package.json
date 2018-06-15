@@ -3,12 +3,17 @@
   "version": "1.1.0",
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
+  "jsnext:main": "dist/bootstrap-styled-provider.min.mjs",
+  "module": "dist/bootstrap-styled-provider.min.mjs",
   "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
   ],
   "author": "Alexander Janet <alexander.janet@yeutech.vn> (https://github.com/santaclauze)",
+  "contributor": [
+    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.vn> (https://github.com/kopax)"
+  ],
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "npm run build:lib && npm run build:dist",
@@ -295,6 +300,5 @@
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js"
   },
   "declinationId": "bs",
-  "contributor": [],
   "private": false
 }
