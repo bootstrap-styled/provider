@@ -1,3 +1,10 @@
+## [1.1.5](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.4...v1.1.5) (2018-06-15)
+
+
+### Bug Fixes
+
+* **dist:** revert mjs ([634e7f6](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/634e7f6))
+
 ## [1.1.4](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.3...v1.1.4) (2018-06-15)
 
 
