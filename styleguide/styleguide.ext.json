@@ -25,7 +25,8 @@
         },
         {
           "name": "Configuration",
-          "content": "docs/configuration.md"
+          "content": "docs/configuration.md",
+          "components": "src/**/[A-Z]*.js"
         }
       ]
     },
