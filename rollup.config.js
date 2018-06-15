@@ -57,6 +57,8 @@ const plugins = [
   builtins(),
   nodeResolve({
     browser: true,
+    module: true,
+    modulesOnly: true,
   }),
   commonjs({
     include: 'node_modules/**',
