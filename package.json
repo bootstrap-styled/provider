@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
-  "jsnext:main": "dist/bootstrap-styled-provider.min.mjs",
-  "module": "dist/bootstrap-styled-provider.min.mjs",
+  "jsnext:main": "dist/bootstrap-styled-provider.esm.js",
+  "module": "dist/bootstrap-styled-provider.esm.js",
   "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
     "IE >= 9",
@@ -78,6 +78,10 @@
         2,
         "always-multiline"
       ],
+      "import/extensions": ["error", "always", {
+        "js": "never",
+        "mjs": "never"
+      }],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -124,6 +128,13 @@
       "react/jsx-no-target-blank": 0,
       "react/require-extension": 0,
       "react/self-closing-comp": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".mjs"]
+        }
+      }
     },
     "plugins": [
       "react"
@@ -172,7 +183,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "exports-loader": "^0.7.0",
