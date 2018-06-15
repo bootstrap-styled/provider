@@ -3,8 +3,8 @@
   "version": "1.1.4",
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
-  "jsnext:main": "dist/bootstrap-styled-provider.min.mjs",
-  "module": "dist/bootstrap-styled-provider.min.mjs",
+  "jsnext:main": "dist/bootstrap-styled-provider.esm.js",
+  "module": "dist/bootstrap-styled-provider.esm.js",
   "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-provider",
   "browserslist": [
     "IE >= 9",
