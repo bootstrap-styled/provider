@@ -1,3 +1,10 @@
+## [1.1.6](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.5...v1.1.6) (2018-06-16)
+
+
+### Bug Fixes
+
+* **deps:** Update BS to 1.7.0 ([ff8b9cf](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/ff8b9cf))
+
 ## [1.1.5](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.4...v1.1.5) (2018-06-15)
 
 
