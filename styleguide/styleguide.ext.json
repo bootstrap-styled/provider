@@ -5,7 +5,6 @@
     "**/*.spec.{js,jsx,ts,tsx}",
     "**/*.d.ts"
   ],
-  "components": "src/**/[A-Z]*.js",
   "sections": [
     {
       "name": "Introduction",
@@ -31,7 +30,8 @@
     },
     {
       "name": "UI Components",
-      "content": "docs/ui.md"
+      "content": "docs/ui.md",
+      "components": "src/**/[A-Z]*.js"
     },
     {
       "name": "FAQ",
