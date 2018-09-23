@@ -49,7 +49,7 @@
     "styled-components",
     "react",
     "yeutech.vn",
-    "providers"
+    "provider"
   ],
   "license": "MIT",
   "eslintConfig": {
