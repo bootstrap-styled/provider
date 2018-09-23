@@ -245,7 +245,7 @@
   "private": false,
   "publishConfig": {
     "tag": "latest",
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://npm.kopaxgroup.com"
   },
   "release": {
     "branch": "master",
