@@ -1,3 +1,3 @@
 ```bash
-$ npm install $PACKAGE_NAME --registry https://npm.kopaxgroup.com --save
+$ npm install $PACKAGE_NAME --save
 ```
