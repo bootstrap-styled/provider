@@ -4,17 +4,22 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import { getGlobalStyleNoBootstrapProvider } from 'bootstrap-styled-mixins/lib/utilities/reboot';
 import themeBs, { makeTheme as makeThemeBs } from 'bootstrap-styled/lib/theme';
 import UtilityProvider, { defaultProps as utilityProviderDefaultProps } from '../UtilityProvider';
+import reset from './reset';
 
 export const defaultProps = {
   theme: themeBs,
-  injectGlobal: true,
+  injectGlobal: false,
+  reset: false,
   utils: utilityProviderDefaultProps.utils,
 };
+
 export const propTypes = {
   /** Specified node element will be passed as children of `<BootstrapProvider />` component. */
   children: PropTypes.node.isRequired,
   /** Define if BootstrapProvider is in charge of calling getGlobalStyles for you, it can only be run once. */
   injectGlobal: PropTypes.bool,
+  /** Define if BootstrapProvider is in charge of injecting the reset css for you, see http://meyerweb.com/eric/tools/css/reset/ for more details */
+  reset: PropTypes.bool,
   /** Theme variables. */
   theme: PropTypes.object,
   /** Utilities variables. */
@@ -109,6 +114,12 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
   }
 
   injectGlobal = () => {
+    if (this.props.reset) {
+      /* eslint-disable no-unused-expressions */
+      injectGlobal`
+        ${reset}
+      `;
+    }
     if (this.props.injectGlobal) {
       /* eslint-disable no-unused-expressions */
       injectGlobal`

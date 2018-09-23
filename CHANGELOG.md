@@ -1,3 +1,80 @@
+## [1.1.7](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.6...v1.1.7) (2018-09-12)
+
+
+### Bug Fixes
+
+* **ci:** repair CI ([1752a2a](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/1752a2a))
+* **deps:** Update deps ([b05577b](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/b05577b))
+
+## [1.1.6](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.5...v1.1.6) (2018-06-16)
+
+
+### Bug Fixes
+
+* **deps:** Update BS to 1.7.0 ([ff8b9cf](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/ff8b9cf))
+
+## [1.1.5](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.4...v1.1.5) (2018-06-15)
+
+
+### Bug Fixes
+
+* **dist:** revert mjs ([634e7f6](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/634e7f6))
+
+## [1.1.4](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.3...v1.1.4) (2018-06-15)
+
+
+### Bug Fixes
+
+* **dist:** fix mjs ([f68968c](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/f68968c))
+
+## [1.1.3](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.2...v1.1.3) (2018-06-15)
+
+
+### Bug Fixes
+
+* **rollup:** restore mjs ([b0fd057](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/b0fd057))
+
+## [1.1.2](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.1...v1.1.2) (2018-06-15)
+
+
+### Bug Fixes
+
+* **ci:** build ([a52e640](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/a52e640))
+
+## [1.1.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.1.0...v1.1.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **package.json:** conflict with amster ([1d0b278](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/1d0b278))
+* **reset:** reset was existing at the end of the css of utility provider ([fd9e714](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/fd9e714))
+
+# [1.1.0](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.1...v1.1.0) (2018-06-13)
+
+
+### Features
+
+* **reset:** added reset props, setting false default for injectGlobal and reset ([837cd50](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/837cd50))
+
+## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/compare/v1.0.0...v1.0.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **ci:** fix ci ([6ec4456](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/6ec4456))
+* **ci:** fix ci ([e58b283](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/e58b283))
+* **ci:** fix ci ([162c9ed](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/162c9ed))
+
+<a name="1.0.0"></a>
+# 1.0.0 (2018-06-12)
+
+
+### Bug Fixes
+
+* **ci:** restore release step in .gitlab-ci.yml ([e9d9943](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/e9d9943))
+* **ci:** update rollup-umd-scripts to 0.9.21 ([747a947](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/747a947))
+* **ci:** using https for repository.url and restore publishConfig.tag = latest ([fd2ca95](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-provider/commit/fd2ca95))
+
 <a name="1.0.32"></a>
 ## [1.0.32](https://module.kopaxgroup.com:20024/dev-tools/rollup-umd/compare/v1.0.31...v1.0.32) (2018-06-09)
 

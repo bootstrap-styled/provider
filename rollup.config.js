@@ -26,7 +26,7 @@ const output = prod ? [
     name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.cjs.min.js`, format: 'cjs', sourcemap: true,
   },
   {
-    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.min.mjs`, format: 'es', sourcemap: true,
+    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.esm.js`, format: 'es', sourcemap: true,
   },
 ] : [
   {
@@ -36,7 +36,7 @@ const output = prod ? [
     name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.cjs.js`, format: 'cjs', sourcemap: true,
   },
   {
-    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.mjs`, format: 'es', sourcemap: true,
+    name: pkg.name, exports: 'named', globals, file: `dist/${pkg.name}.esm.js`, format: 'es', sourcemap: true,
   },
 ];
 
@@ -61,8 +61,8 @@ const plugins = [
   commonjs({
     include: 'node_modules/**',
     namedExports: {
-      'node_modules/bootstrap-styled/lib/theme/index.js': [ 'makeTheme' ]
-    }
+      'node_modules/bootstrap-styled/lib/theme/index.js': ['makeTheme'],
+    },
   }),
   replace({
     'process.env.NODE_ENV': JSON.stringify(prod ? 'production' : 'development'),

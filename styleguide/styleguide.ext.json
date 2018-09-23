@@ -30,7 +30,8 @@
     },
     {
       "name": "UI Components",
-      "content": "docs/ui.md"
+      "content": "docs/ui.md",
+      "components": "src/**/[A-Z]*.js"
     },
     {
       "name": "FAQ",

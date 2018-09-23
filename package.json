@@ -1,19 +1,24 @@
 {
-  "name": "@yeutech/providers",
-  "version": "0.0.0-development",
-  "description": "providers",
+  "name": "@bootstrap-styled/provider",
+  "version": "1.1.7",
+  "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/providers",
+  "homepage": "https://bootstrap-styled.yeutech.com/provider",
+  "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
+  "module": "dist/@bootstrap-styled/provider.es.js",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
   ],
   "author": "Alexander Janet <alexander.janet@yeutech.vn> (https://github.com/santaclauze)",
+  "contributor": [
+    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.vn> (https://github.com/kopax)"
+  ],
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "npm run build:lib && npm run build:dist",
     "prebuild:lib": "rimraf lib/*",
-    "build:lib": "BABEL_ENV=production babel --out-dir lib src",
+    "build:lib": "BABEL_ENV=production babel --out-dir lib src --copy-files",
     "prebuild:dist": "rimraf dist/*",
     "build:clean": "rimraf lib/* dist/*",
     "build:dist:dev": "rollup -c",
@@ -33,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/providers.git"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/provider.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/providers/issues"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/provider/issues"
   },
   "keywords": [
     "bootstrap",
@@ -46,7 +51,7 @@
     "yeutech.vn",
     "providers"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -72,6 +77,14 @@
       "comma-dangle": [
         2,
         "always-multiline"
+      ],
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "mjs": "never"
+        }
       ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
@@ -120,6 +133,16 @@
       "react/require-extension": 0,
       "react/self-closing-comp": 0
     },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".mjs"
+          ]
+        }
+      }
+    },
     "plugins": [
       "react"
     ]
@@ -135,12 +158,19 @@
     "lint-staged"
   ],
   "devDependencies": {
-    "@semantic-release/changelog": "^2.0.2",
-    "@semantic-release/exec": "^2.2.4",
-    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/exec": "^2.3.0",
+    "@semantic-release/git": "^7.0.0",
     "@semantic-release/gitlab": "^2.1.4",
-    "@semantic-release/npm": "^3.2.5",
-    "@yeutech/rollup-documentation": "^2.1.3",
+    "@semantic-release/npm": "^4.0.0",
+    "@yeutech-lab/rollup-umd-documentation": "^2.3.18",
+    "@yeutech/rollup-documentation": "^2.3.4",
+    "@yeutech/rollup-umd-ci-build": "^1.0.5",
+    "@yeutech/rollup-umd-ci-deploy": "^1.0.7",
+    "@yeutech/rollup-umd-ci-release": "^1.0.11",
+    "@yeutech/rollup-umd-ci-release-transitive": "^1.1.6",
+    "@yeutech/rollup-umd-ci-test": "^1.0.6",
+    "@yeutech/rollup-umd-scripts": "^0.15.22",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -167,7 +197,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "exports-loader": "^0.7.0",
@@ -180,7 +210,7 @@
     "raf": "^3.4.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-styleguidist": "^7.0.14",
+    "react-styleguidist": "7.1.1",
     "react-test-renderer": "^16.4.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
@@ -193,7 +223,6 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
-    "rollup-umd-scripts": "^0.9.14",
     "rollup-watch": "^4.3.1",
     "semantic-release": "^15.5.0",
     "sinon": "^2.3.2",
@@ -203,6 +232,7 @@
   },
   "dependencies": {
     "bootstrap-styled": "^1.6.5",
+    "@bootstrap-styled/mixins": "^1.0.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.1"
@@ -212,6 +242,7 @@
     "react-dom": "^16.4.0",
     "styled-components": "^3.3.0"
   },
+  "private": false,
   "publishConfig": {
     "tag": "latest",
     "registry": "https://npm.kopaxgroup.com"
@@ -220,7 +251,7 @@
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -277,7 +308,7 @@
     "coverageThreshold": {
       "global": {
         "statements": 50,
-        "branches": 50,
+        "branches": 18,
         "functions": 50,
         "lines": 50
       }
@@ -293,7 +324,5 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js"
   },
-  "declinationId": "bs",
-  "contributor": [],
-  "private": true
+  "declinationId": "bs"
 }
