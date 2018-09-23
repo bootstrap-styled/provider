@@ -324,5 +324,5 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js"
   },
-  "declinationId": "bs",
+  "declinationId": "bs"
 }
