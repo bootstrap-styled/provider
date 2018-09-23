@@ -253,6 +253,10 @@
     "fail": false,
     "npmPublish": true,
     "verifyConditions": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
+      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
@@ -262,14 +266,17 @@
       }
     ],
     "prepare": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
+      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
         "assets": [
           "package.json",
-          "dist/**/*.{js|es}",
-          "lib/**/*.js",
+          "src/**/*.js",
           "CHANGELOG.md",
           "README.md",
           "LICENSE.md"
@@ -279,12 +286,12 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/exec",
-        "cmd": "echo ${nextRelease.version} > ~/release_version"
-      },
-      {
         "path": "@semantic-release/gitlab",
         "gitlabUrl": "https://module.kopaxgroup.com"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
       }
     ]
   },
