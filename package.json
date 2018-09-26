@@ -164,7 +164,6 @@
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^4.0.0",
     "@yeutech-lab/rollup-umd-documentation": "^2.3.18",
-    "@yeutech/rollup-documentation": "^2.3.4",
     "@yeutech/rollup-umd-ci-build": "^1.0.5",
     "@yeutech/rollup-umd-ci-deploy": "^1.0.7",
     "@yeutech/rollup-umd-ci-release": "^1.0.11",
@@ -231,7 +230,7 @@
     "webpack": "^4.12.0"
   },
   "dependencies": {
-    "bootstrap-styled": "^1.6.5",
+    "bootstrap-styled": "^1.7.5",
     "@bootstrap-styled/mixins": "^1.0.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
@@ -308,6 +307,7 @@
       "<rootDir>/dist/",
       "<rootDir>/lib/"
     ],
+    "testURL": "http://localhost/",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/*.test.{js,jsx}"
