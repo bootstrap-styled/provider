@@ -307,6 +307,7 @@
       "<rootDir>/dist/",
       "<rootDir>/lib/"
     ],
+    "testURL": "http://localhost/",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/*.test.{js,jsx}"
