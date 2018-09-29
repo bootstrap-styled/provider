@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
-import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/mixins/lib/utilities/reboot';
+import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/css-utils/lib/reboot';
 import themeBs, { makeTheme as makeThemeBs } from 'bootstrap-styled/lib/theme';
 import UtilityProvider, { defaultProps as utilityProviderDefaultProps } from '../UtilityProvider';
 import reset from './reset';
