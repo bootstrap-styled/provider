@@ -147,6 +147,38 @@
       "react"
     ]
   },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "testURL": "http://localhost/",
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/lib/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.test.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 86,
+        "branches": 20,
+        "functions": 58,
+        "lines": 80
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testRegex": "tests/.*\\.test\\.js$",
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
@@ -163,13 +195,6 @@
     "@semantic-release/git": "^7.0.0",
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^4.0.0",
-    "@yeutech-lab/rollup-umd-documentation": "^2.3.18",
-    "@yeutech/rollup-umd-ci-build": "^1.0.5",
-    "@yeutech/rollup-umd-ci-deploy": "^1.0.7",
-    "@yeutech/rollup-umd-ci-release": "^1.0.11",
-    "@yeutech/rollup-umd-ci-release-transitive": "^1.0.11",
-    "@yeutech/rollup-umd-ci-test": "^1.0.6",
-    "@yeutech/rollup-umd-scripts": "^0.15.22",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -194,11 +219,12 @@
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "exports-loader": "^0.7.0",
     "istanbul-api": "1.2.2",
     "istanbul-reports": "1.1.4",
@@ -227,11 +253,12 @@
     "sinon": "^2.3.2",
     "styled-components": "^3.3.0",
     "toctoc": "^0.3.0",
-    "webpack": "^4.12.0"
+    "webpack": "^4.16.1"
   },
   "dependencies": {
-    "bootstrap-styled": "^1.7.5",
-    "@bootstrap-styled/mixins": "^1.0.4",
+    "bootstrap-styled": "^1.7.8",
+    "@bootstrap-styled/css-mixins": "^1.0.0",
+    "@bootstrap-styled/css-utils": "^1.0.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.1"
@@ -239,13 +266,14 @@
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "styled-components": "^3.3.0"
+    "styled-components": "^3.3.3"
   },
-  "private": false,
   "publishConfig": {
     "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
+  "private": false,
   "release": {
     "branch": "master",
     "success": false,
@@ -275,7 +303,7 @@
         "path": "@semantic-release/git",
         "assets": [
           "package.json",
-          "src/**/*.js",
+          "src/**",
           "CHANGELOG.md",
           "README.md",
           "LICENSE.md"
@@ -298,38 +326,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src/"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/dist/",
-      "<rootDir>/lib/"
-    ],
-    "testURL": "http://localhost/",
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/**/*.test.{js,jsx}"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 50,
-        "branches": 18,
-        "functions": 50,
-        "lines": 50
-      }
-    },
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "testRegex": "tests/.*\\.test\\.js$",
-    "testResultsProcessor": "jest-sonar-reporter",
-    "setupFiles": [
-      "raf/polyfill"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js"
-  },
-  "declinationId": "bs"
+  }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider, injectGlobal } from 'styled-components';
-import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/mixins/lib/utilities/reboot';
+import { ThemeProvider, injectGlobal as injectGlobalStyled } from 'styled-components';
+import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/css-utils/lib/reboot';
 import themeBs, { makeTheme as makeThemeBs } from 'bootstrap-styled/lib/theme';
 import UtilityProvider, { defaultProps as utilityProviderDefaultProps } from '../UtilityProvider';
-import reset from './reset';
+import meyerwebReset from './reset';
 
 export const defaultProps = {
   theme: themeBs,
@@ -59,6 +59,7 @@ export const propTypes = {
 class BootstrapProvider extends React.Component { // eslint-disable-line react/prefer-stateless-function
   /* eslint-disable react/no-unused-prop-types */
   static propTypes = propTypes;
+
   /* eslint-enable react/no-unused-prop-types */
   static defaultProps = defaultProps;
 
@@ -114,22 +115,25 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
   }
 
   injectGlobal = () => {
-    if (this.props.reset) {
+    const { reset, injectGlobal } = this.props;
+    const { theme } = this.state;
+
+    if (reset) {
       /* eslint-disable no-unused-expressions */
-      injectGlobal`
-        ${reset}
+      injectGlobalStyled`
+        ${meyerwebReset}
       `;
     }
-    if (this.props.injectGlobal) {
+    if (injectGlobal) {
       /* eslint-disable no-unused-expressions */
-      injectGlobal`
+      injectGlobalStyled`
         ${getGlobalStyleNoBootstrapProvider(
-        this.state.theme['$font-family-base'] || themeBs['$font-family-base'],
-        this.state.theme['$font-size-base'] || themeBs['$font-size-base'],
-        this.state.theme['$font-weight-base'] || themeBs['$font-weight-base'],
-        this.state.theme['$line-height-base'] || themeBs['$line-height-base'],
-        this.state.theme['$body-color'] || themeBs['$body-color'],
-        this.state.theme['$body-bg'] || themeBs['$body-bg'],
+        theme['$font-family-base'] || themeBs['$font-family-base'],
+        theme['$font-size-base'] || themeBs['$font-size-base'],
+        theme['$font-weight-base'] || themeBs['$font-weight-base'],
+        theme['$line-height-base'] || themeBs['$line-height-base'],
+        theme['$body-color'] || themeBs['$body-color'],
+        theme['$body-bg'] || themeBs['$body-bg'],
       )}
       `;
     }
@@ -151,8 +155,9 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
 
   render() {
     const { children, utils } = this.props;
+    const { theme } = this.state;
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <ThemeProvider theme={theme}>
         <UtilityProvider utils={utils}>
           {children}
         </UtilityProvider>
