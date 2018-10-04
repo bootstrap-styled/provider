@@ -22,7 +22,6 @@ provider npm package.
   - [License](#license)
 
 ---
-  
 ## Documentation
 
   - View provider [HTML documentation](https://bootstrap-styled.yeutech.com/provider) *(require access)*
