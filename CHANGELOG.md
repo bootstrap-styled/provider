@@ -1,3 +1,17 @@
+## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.0...v1.0.1) (2018-10-04)
+
+
+### Bug Fixes
+
+* **.npm|.git|ignore:** added right standard of ingore ([98ddaf2](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/98ddaf2))
+* **CI:** trying to fix ci ([b12b519](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/b12b519))
+* **CI:** trying to fix CI ([25cafef](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/25cafef))
+* **CI:** trying to fix CI ([8d4dd4f](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/8d4dd4f))
+* **CI:** trying to fix CI ([4425679](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/4425679))
+* **imports:** added right imports ([8e3accd](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/8e3accd))
+* **README:** eslint ([a7cd746](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/a7cd746))
+* **README:** indent ([4432f29](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/4432f29))
+
 # 1.0.0 (2018-09-26)
 
 
