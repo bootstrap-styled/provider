@@ -1,3 +1,10 @@
+## [1.0.2](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.1...v1.0.2) (2018-10-09)
+
+
+### Bug Fixes
+
+* **build error:** branches where not set properly ([4ea5835](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/4ea5835))
+
 ## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.0...v1.0.1) (2018-10-04)
 
 
