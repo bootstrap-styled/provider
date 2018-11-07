@@ -270,11 +270,9 @@
     "styled-components": "^3.3.3"
   },
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
-  "private": false,
   "release": {
     "branch": "master",
     "success": false,
@@ -329,18 +327,18 @@
     }
   },
   "transitive": {
-    "name": "bootstrap-styled",
+    "name": "provider",
     "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/bootstrap-styled",
-    "jsnext:main": "dist/@bootstrap-styled/bootstrap-styled.esm.js",
-    "module": "dist/@bootstrap-styled/bootstrap-styled.esm.js",
-    "homepage": "https://bootstrap-styled.github.io/bootstrap-styled",
+    "scopedName": "@bootstrap-styled/provider",
+    "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
+    "module": "dist/@bootstrap-styled/provider.es.js",
+    "homepage": "https://bootstrap-styled.github.io/provider",
     "repository": {
       "type": "git",
-      "url": "https://github.com/bootstrap-styled/bootstrap-styled.git"
+      "url": "https://github.com/bootstrap-styled/provider.git"
     },
     "bugs": {
-      "url": "https://github.com/bootstrap-styled/bootstrap-styled/issues"
+      "url": "https://github.com/bootstrap-styled/provider/issues"
     },
     "publishConfig": {
       "access": "public",
