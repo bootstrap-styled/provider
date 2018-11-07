@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/provider",
+  "homepage": "https://bootstrap-styled.github.io/provider",
   "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
   "module": "dist/@bootstrap-styled/provider.es.js",
   "browserslist": [
@@ -34,15 +34,14 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "postinstall": "node -e \"console.log('\\u001b[31m@bootstrap-styled/provider is deprecated, use @bootstrap-styled/provider instead.')\" || exit 0"
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/provider.git"
+    "url": "https://github.com/bootstrap-styled/provider.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/provider/issues"
+    "url": "https://github.com/bootstrap-styled/provider/issues"
   },
   "keywords": [
     "bootstrap",
@@ -192,9 +191,8 @@
   ],
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.0",
-    "@semantic-release/exec": "^2.3.0",
-    "@semantic-release/git": "^7.0.0",
-    "@semantic-release/gitlab": "^2.1.4",
+    "@semantic-release/git": "^7.0.5",
+    "@semantic-release/github": "^5.2.1",
     "@semantic-release/npm": "^4.0.0",
     "@yeutech-lab/rollup-umd-documentation": "^2.4.1",
     "babel-cli": "^6.26.0",
@@ -271,32 +269,20 @@
     "styled-components": "^3.3.3"
   },
   "publishConfig": {
-    "registry": "https://npm.kopaxgroup.com",
-    "tag": "latest"
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest",
+    "access": "public"
   },
   "release": {
     "branch": "master",
-    "success": false,
-    "fail": false,
     "npmPublish": true,
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      }
+      "@semantic-release/github"
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -313,37 +299,55 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "package.json"
+          },
+          {
+            "path": "LICENSE.md"
+          },
+          {
+            "path": "CHANGELOG.md"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "dist/*.esm.js",
+            "label": "ES module"
+          },
+          {
+            "path": "dist/*.esm.js.map",
+            "label": "ES module source map"
+          },
+          {
+            "path": "dist/*.min.js",
+            "label": "UMD compressed"
+          },
+          {
+            "path": "dist/*.min.js.map",
+            "label": "UMD compressed source map"
+          },
+          {
+            "path": "dist/*.cjs.min.js",
+            "label": "CJS compressed"
+          },
+          {
+            "path": "dist/*.cjs.min.js.map",
+            "label": "CJS compressed source map"
+          },
+          {
+            "path": "lib/*.js",
+            "label": "CJS folder"
+          }
+        ]
       }
     ]
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "transitive": {
-    "name": "provider",
-    "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/provider",
-    "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
-    "module": "dist/@bootstrap-styled/provider.es.js",
-    "homepage": "https://bootstrap-styled.github.io/provider",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/bootstrap-styled/provider.git"
-    },
-    "bugs": {
-      "url": "https://github.com/bootstrap-styled/provider/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
     }
   }
 }

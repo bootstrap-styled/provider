@@ -57,7 +57,7 @@
     }
   ],
   "ribbon": {
-    "url": "https://module.kopaxgroup.com/styled-components/bootstrap-styled-provider",
-    "text": "Fork us on GitLab"
+    "url": "https://github.com/bootstrap-styled/provider",
+    "text": "Fork us on GitHub"
   }
 }

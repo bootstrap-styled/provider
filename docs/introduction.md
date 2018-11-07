@@ -1,10 +1,3 @@
-[![build status]($CI_PROJECT_URL/badges/v$PACKAGE_VERSION/build.svg)]($CI_PROJECT_URL/commits/v$PACKAGE_VERSION)
-[![coverage report]($CI_PROJECT_URL/badges/v$PACKAGE_VERSION/coverage.svg)]($CI_PROJECT_URL/commits/v$PACKAGE_VERSION)
+[![Build Status](https://travis-ci.org/@bootstrap-styled/provider.svg?branch=master)](https://travis-ci.org/@bootstrap-styled/provider) [![npm Version](https://img.shields.io/npm/v/@bootstrap-styled/provider.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/provider) [![License](https://img.shields.io/npm/l/@bootstrap-styled/provider.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/provider) [![npm Version](https://img.shields.io/node/v/@bootstrap-styled/provider.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/provider) [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/provider)
 
-![image](https://img.shields.io/badge/version-$PACKAGE_VERSION-green.svg)
-![image](https://img.shields.io/badge/node-$NODE_VERSION-brightgreen.svg)
-![image](https://img.shields.io/badge/npm-$NPM_VERSION-red.svg)
-![image](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-![image]($IMG_SHIELD_PUBLISHING)
-
-$PACKAGE_NAME contains the BootstrapProvider and UtilityProvider components. They allow you to activate features such as Eric Meyer's famous reset, bootstrap's original global class utilities, quick application of theme variables and much more...
+BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities
