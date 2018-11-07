@@ -325,24 +325,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "transitive": {
-    "name": "provider",
-    "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/provider",
-    "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
-    "module": "dist/@bootstrap-styled/provider.es.js",
-    "homepage": "https://bootstrap-styled.github.io/provider",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/bootstrap-styled/provider.git"
-    },
-    "bugs": {
-      "url": "https://github.com/bootstrap-styled/provider/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
   }
 }
