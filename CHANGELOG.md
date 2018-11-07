@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/bootstrap-styled/provider/compare/v1.1.0...v1.1.1) (2018-11-07)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/bootstrap-styled/provider ([bc853c4](https://github.com/bootstrap-styled/provider/commit/bc853c4))
+
 # [1.1.0](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.2...v1.1.0) (2018-11-07)
 
 
