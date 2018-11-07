@@ -1,3 +1,16 @@
+# [1.1.0](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.2...v1.1.0) (2018-11-07)
+
+
+### Bug Fixes
+
+* **documentation:** Improved documentation presentation and content. ([ecf42b1](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/ecf42b1))
+* **preparing for GH publication:** Added .travis and updated dependencies. ([b950ea0](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/b950ea0))
+
+
+### Features
+
+* **publish GH:** Publishing module to github. ([ebfa133](https://module.kopaxgroup.com/bootstrap-styled/provider/commit/ebfa133))
+
 ## [1.0.2](https://module.kopaxgroup.com/bootstrap-styled/provider/compare/v1.0.1...v1.0.2) (2018-10-09)
 
 
