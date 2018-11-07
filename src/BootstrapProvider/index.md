@@ -161,4 +161,4 @@ injectGlobal`
 `;
 ```
 
-> > **Heads up!** The `BootstrapProvider` is an extended version of the `ThemeProvider` and contains bootstrap additional fixes to give you a better experience and higher adaptability to browsers and devices. It also include lots of css utilities.
+> **Heads up!** The `BootstrapProvider` is an extended version of the `ThemeProvider` and contains bootstrap additional fixes to give you a better experience and higher adaptability to browsers and devices. It also include lots of css utilities.

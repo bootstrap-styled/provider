@@ -195,6 +195,7 @@
     "@semantic-release/git": "^7.0.0",
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^4.0.0",
+    "@yeutech-lab/rollup-umd-documentation": "^2.4.1",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -235,7 +236,7 @@
     "raf": "^3.4.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-styleguidist": "7.1.1",
+    "react-styleguidist": "8.0.3",
     "react-test-renderer": "^16.4.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
@@ -256,9 +257,9 @@
     "webpack": "^4.16.1"
   },
   "dependencies": {
-    "bootstrap-styled": "^1.7.8",
-    "@bootstrap-styled/css-mixins": "^1.0.0",
-    "@bootstrap-styled/css-utils": "^1.0.0",
+    "bootstrap-styled": "^1.9.0",
+    "@bootstrap-styled/css-mixins": "^1.0.2",
+    "@bootstrap-styled/css-utils": "^1.0.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.1"
@@ -269,11 +270,9 @@
     "styled-components": "^3.3.3"
   },
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
-  "private": false,
   "release": {
     "branch": "master",
     "success": false,
@@ -325,6 +324,25 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "transitive": {
+    "name": "provider",
+    "scope": "bootstrap-styled",
+    "scopedName": "@bootstrap-styled/provider",
+    "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
+    "module": "dist/@bootstrap-styled/provider.es.js",
+    "homepage": "https://bootstrap-styled.github.io/provider",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bootstrap-styled/provider.git"
+    },
+    "bugs": {
+      "url": "https://github.com/bootstrap-styled/provider/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
     }
   }
 }

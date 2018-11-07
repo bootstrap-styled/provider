@@ -7,4 +7,4 @@
 ![image](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![image]($IMG_SHIELD_PUBLISHING)
 
-$PACKAGE_NAME contains BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities
+$PACKAGE_NAME contains the BootstrapProvider and UtilityProvider components. They allow you to activate features such as Eric Meyer's famous reset, bootstrap's original global class utilities, quick application of theme variables and much more...

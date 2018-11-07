@@ -3,39 +3,35 @@
     "**/__tests__/**",
     "**/*.test.{js,jsx,ts,tsx}",
     "**/*.spec.{js,jsx,ts,tsx}",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "**/src/index.js"
   ],
+  "pagePerSection": true,
   "sections": [
     {
       "name": "Introduction",
       "content": "docs/introduction.md"
     },
     {
-      "name": "Prerequisite",
-      "content": "docs/prerequisite.md"
-    },
-    {
-      "name": "Getting started",
-      "content": "docs/getting-started.md",
+      "name": "Documentation",
       "sections": [
+        {
+          "name": "Prerequisite",
+          "content": "docs/prerequisite.md"
+        },
         {
           "name": "Installation",
           "content": "docs/installation.md"
-        },
-        {
-          "name": "Configuration",
-          "content": "docs/configuration.md"
         }
       ]
     },
     {
       "name": "UI Components",
-      "content": "docs/ui.md",
-      "components": "src/**/[A-Z]*.js"
-    },
-    {
-      "name": "FAQ",
-      "content": "docs/faq.md"
+      "components": "src/**/*.js",
+      "ignore": [
+        "src/BootstrapProvider/reset.js",
+        "src/BootstrapProvider/reset.js"
+      ]
     },
     {
       "name": "Contribute",
@@ -54,6 +50,10 @@
           "content": "docs/release.md"
         }
       ]
+    },
+    {
+      "name": "FAQ",
+      "content": "docs/faq.md"
     }
   ],
   "ribbon": {
