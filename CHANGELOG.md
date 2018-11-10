@@ -1,3 +1,15 @@
+## [1.1.2](https://github.com/bootstrap-styled/provider/compare/v1.1.1...v1.1.2) (2018-11-10)
+
+
+### Bug Fixes
+
+* **merge conflic:** fix. ([779713c](https://github.com/bootstrap-styled/provider/commit/779713c))
+
+
+### Performance Improvements
+
+* **styled-components:** migrated from styled-components v3 to v4. ([03e47e9](https://github.com/bootstrap-styled/provider/commit/03e47e9))
+
 ## [1.1.1](https://github.com/bootstrap-styled/provider/compare/v1.1.0...v1.1.1) (2018-11-07)
 
 
