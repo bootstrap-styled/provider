@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/provider",
-  "version": "0.0.0-development",
+  "version": "1.1.1",
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
   "homepage": "https://bootstrap-styled.github.io/provider",
