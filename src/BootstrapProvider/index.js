@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider, injectGlobal as injectGlobalStyled } from 'styled-components';
-import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/css-utils/lib/reboot';
-import themeBs, { makeTheme as makeThemeBs } from 'bootstrap-styled/lib/theme';
+import { ThemeProvider } from 'styled-components';
+import { makeTheme as makeThemeBs, theme as themeBs } from '@bootstrap-styled/bootstrap-styled';
 import UtilityProvider, { defaultProps as utilityProviderDefaultProps } from '../UtilityProvider';
-import meyerwebReset from './reset';
+import GlobalStyle from './GlobalStyle';
 
 export const defaultProps = {
   theme: themeBs,
@@ -114,31 +113,6 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
     return theme;
   }
 
-  injectGlobal = () => {
-    const { reset, injectGlobal } = this.props;
-    const { theme } = this.state;
-
-    if (reset) {
-      /* eslint-disable no-unused-expressions */
-      injectGlobalStyled`
-        ${meyerwebReset}
-      `;
-    }
-    if (injectGlobal) {
-      /* eslint-disable no-unused-expressions */
-      injectGlobalStyled`
-        ${getGlobalStyleNoBootstrapProvider(
-        theme['$font-family-base'] || themeBs['$font-family-base'],
-        theme['$font-size-base'] || themeBs['$font-size-base'],
-        theme['$font-weight-base'] || themeBs['$font-weight-base'],
-        theme['$line-height-base'] || themeBs['$line-height-base'],
-        theme['$body-color'] || themeBs['$body-color'],
-        theme['$body-bg'] || themeBs['$body-bg'],
-      )}
-      `;
-    }
-  }
-
   windowPhone8Fix() {
     // Copyright 2014-2017 The Bootstrap Authors
     // Copyright 2014-2017 Twitter, Inc.
@@ -154,11 +128,17 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
   }
 
   render() {
-    const { children, utils } = this.props;
+    const {
+      children,
+      utils,
+      reset,
+      injectGlobal,
+    } = this.props;
     const { theme } = this.state;
     return (
       <ThemeProvider theme={theme}>
         <UtilityProvider utils={utils}>
+          {(reset || injectGlobal) && <GlobalStyle reset={reset} injectGlobal={injectGlobal} />}
           {children}
         </UtilityProvider>
       </ThemeProvider>

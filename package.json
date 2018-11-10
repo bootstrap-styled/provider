@@ -194,7 +194,6 @@
     "@semantic-release/git": "^7.0.5",
     "@semantic-release/github": "^5.2.1",
     "@semantic-release/npm": "^4.0.0",
-    "@yeutech-lab/rollup-umd-documentation": "^2.4.1",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -244,19 +243,19 @@
     "rollup-plugin-inject": "^2.0.0",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
     "rollup-watch": "^4.3.1",
     "semantic-release": "^15.5.0",
     "sinon": "^2.3.2",
-    "styled-components": "^3.3.0",
+    "styled-components": "^4.0.3",
     "toctoc": "^0.3.0",
     "webpack": "^4.16.1"
   },
   "dependencies": {
-    "bootstrap-styled": "^1.9.0",
+    "@bootstrap-styled/bootstrap-styled": "^1.0.0",
     "@bootstrap-styled/css-mixins": "^1.0.2",
     "@bootstrap-styled/css-utils": "^1.0.1",
     "classnames": "^2.2.6",
@@ -266,7 +265,7 @@
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "styled-components": "^3.3.3"
+    "styled-components": "^4.0.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
