@@ -17,7 +17,7 @@ import spacingUtils from '@bootstrap-styled/css-utils/lib/spacing';
 import textUtils from '@bootstrap-styled/css-utils/lib/text';
 import transitionUtils from '@bootstrap-styled/css-utils/lib/transition';
 import visibilityUtils from '@bootstrap-styled/css-utils/lib/visibility';
-import theme from 'bootstrap-styled/lib/theme';
+import theme from '@bootstrap-styled/bootstrap-styled/lib/theme';
 
 
 export const defaultProps = {
