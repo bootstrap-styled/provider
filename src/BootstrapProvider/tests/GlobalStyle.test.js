@@ -19,10 +19,4 @@ describe('<GlobalStyle />', () => {
     });
     expect(renderedComponent.find('GlobalStyleComponent').length).toBe(1);
   });
-  it('should find GlobalStyleComponent if props injectGlobal is true', () => {
-    const renderedComponent = renderComponent({
-      injectGlobal: true,
-    });
-    expect(renderedComponent.find('GlobalStyleComponent').length).toBe(1);
-  });
 });

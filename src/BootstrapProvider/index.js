@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { makeTheme as makeThemeBs, theme as themeBs } from '@bootstrap-styled/bootstrap-styled';
+import { makeTheme as makeThemeBs, theme as themeBs } from 'bootstrap-styled';
 import UtilityProvider, { defaultProps as utilityProviderDefaultProps } from '../UtilityProvider';
 import GlobalStyle from './GlobalStyle';
 
