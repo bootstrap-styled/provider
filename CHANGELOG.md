@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/bootstrap-styled/provider/compare/v1.1.3...v1.1.4) (2018-11-12)
+
+
+### Bug Fixes
+
+* **import:** correted wrong import. ([1e0e7ff](https://github.com/bootstrap-styled/provider/commit/1e0e7ff))
+
 ## [1.1.3](https://github.com/bootstrap-styled/provider/compare/v1.1.2...v1.1.3) (2018-11-12)
 
 
