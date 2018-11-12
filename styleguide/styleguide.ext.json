@@ -30,7 +30,7 @@
       "components": "src/**/*.js",
       "ignore": [
         "src/BootstrapProvider/reset.js",
-        "src/BootstrapProvider/reset.js"
+        "src/BootstrapProvider/GlobalStyle.js"
       ]
     },
     {
