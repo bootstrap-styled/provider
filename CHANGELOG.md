@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/bootstrap-styled/provider/compare/v1.1.2...v1.1.3) (2018-11-12)
+
+
+### Bug Fixes
+
+* **package.json:** changed verison and imports of bootstrap-styled. ([237d2c3](https://github.com/bootstrap-styled/provider/commit/237d2c3))
+* **README:** changed build status url. ([679e600](https://github.com/bootstrap-styled/provider/commit/679e600))
+
 ## [1.1.2](https://github.com/bootstrap-styled/provider/compare/v1.1.1...v1.1.2) (2018-11-10)
 
 
