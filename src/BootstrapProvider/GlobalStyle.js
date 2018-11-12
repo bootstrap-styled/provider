@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { getGlobalStyleNoBootstrapProvider } from '@bootstrap-styled/css-utils/lib/reboot';
-import themeBs from '@bootstrap-styled/bootstrap-styled/lib/theme';
+import themeBs from 'bootstrap-styled/lib/theme';
 
 import meyerwebReset from './reset';
 
