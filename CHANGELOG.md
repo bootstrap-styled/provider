@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/bootstrap-styled/provider/compare/v1.1.5...v1.1.6) (2018-11-14)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade many dependencies ([527085f](https://github.com/bootstrap-styled/provider/commit/527085f))
+
 ## [1.1.5](https://github.com/bootstrap-styled/provider/compare/v1.1.4...v1.1.5) (2018-11-12)
 
 
