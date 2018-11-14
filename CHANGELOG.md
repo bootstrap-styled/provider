@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/bootstrap-styled/provider/compare/v1.1.4...v1.1.5) (2018-11-12)
+
+
+### Bug Fixes
+
+* **documentation:** added doc ([8ae4d2b](https://github.com/bootstrap-styled/provider/commit/8ae4d2b))
+
 ## [1.1.4](https://github.com/bootstrap-styled/provider/compare/v1.1.3...v1.1.4) (2018-11-12)
 
 
