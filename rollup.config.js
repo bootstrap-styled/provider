@@ -72,7 +72,7 @@ const plugins = [
   }),
   json(),
   babel({
-    plugins: ['external-helpers'],
+    babelrc: false,
     exclude: 'node_modules/**',
   }),
   cleanup(),
