@@ -16,3 +16,5 @@ coverage/
 docs/
 reports/
 /styleguide
+babel.config.js
+babel.ext.json
