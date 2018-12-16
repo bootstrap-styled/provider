@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/bootstrap-styled/provider/compare/v1.3.0...v1.4.0) (2018-12-16)
+
+
+### Bug Fixes
+
+* **dist:** fix distribution build ([c380a71](https://github.com/bootstrap-styled/provider/commit/c380a71))
+
+
+### Features
+
+* **greenkeeper:** added greenkeeper and updated all deps ([ce6444f](https://github.com/bootstrap-styled/provider/commit/ce6444f))
+
 # [1.3.0](https://github.com/bootstrap-styled/provider/compare/v1.2.1...v1.3.0) (2018-11-23)
 
 
