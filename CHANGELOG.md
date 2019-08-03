@@ -1,3 +1,31 @@
+## [1.4.2](https://github.com/bootstrap-styled/provider/compare/v1.4.1...v1.4.2) (2019-01-03)
+
+
+### Bug Fixes
+
+* **dependencies:** Update [@bootstrap-styled](https://github.com/bootstrap-styled)/css-mixins to the latest version ([a672c85](https://github.com/bootstrap-styled/provider/commit/a672c85))
+* **dependencies:** Update rollup-plugin-terser to the latest version 🚀 ([1f9f210](https://github.com/bootstrap-styled/provider/commit/1f9f210))
+* **package:** update [@bootstrap-styled](https://github.com/bootstrap-styled)/css-mixins to version 2.0.0 ([156eae1](https://github.com/bootstrap-styled/provider/commit/156eae1))
+
+## [1.4.1](https://github.com/bootstrap-styled/provider/compare/v1.4.0...v1.4.1) (2018-12-16)
+
+
+### Bug Fixes
+
+* **greenkeeper:** fix sonar running on greenkeeper test ([31f230a](https://github.com/bootstrap-styled/provider/commit/31f230a))
+
+# [1.4.0](https://github.com/bootstrap-styled/provider/compare/v1.3.0...v1.4.0) (2018-12-16)
+
+
+### Bug Fixes
+
+* **dist:** fix distribution build ([c380a71](https://github.com/bootstrap-styled/provider/commit/c380a71))
+
+
+### Features
+
+* **greenkeeper:** added greenkeeper and updated all deps ([ce6444f](https://github.com/bootstrap-styled/provider/commit/ce6444f))
+
 # [1.3.0](https://github.com/bootstrap-styled/provider/compare/v1.2.1...v1.3.0) (2018-11-23)
 
 
