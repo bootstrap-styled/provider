@@ -42,18 +42,10 @@
           "content": "docs/commands.md"
         },
         {
-          "name": "Branches",
-          "content": "docs/branches.md"
-        },
-        {
           "name": "Release",
           "content": "docs/release.md"
         }
       ]
-    },
-    {
-      "name": "FAQ",
-      "content": "docs/faq.md"
     }
   ],
   "ribbon": {
