@@ -22,3 +22,4 @@ docs/
 reports/
 /styleguide
 .ncurc.js
+index.d.ts
