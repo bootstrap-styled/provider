@@ -1,3 +1,17 @@
+## [1.5.1](https://github.com/bootstrap-styled/provider/compare/v1.5.0...v1.5.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **typescript:** added typescript definition ([ca55108](https://github.com/bootstrap-styled/provider/commit/ca55108))
+
+# [1.5.0](https://github.com/bootstrap-styled/provider/compare/v1.4.2...v1.5.0) (2019-08-04)
+
+
+### Features
+
+* **typescript:** added typescript definition ([de8b561](https://github.com/bootstrap-styled/provider/commit/de8b561))
+
 ## [1.4.2](https://github.com/bootstrap-styled/provider/compare/v1.4.1...v1.4.2) (2019-01-03)
 
 
