@@ -68,7 +68,8 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
     isWindowPhone8Fixed: null, // eslint-disable-line react/no-unused-state
   }
 
-  componentWillMount() {
+  // eslint-disable-next-line camelcase
+  UNSAFE_componentWillMount() {
     this.setTheme(this.props, this.injectGlobal);
   }
 
@@ -80,7 +81,8 @@ class BootstrapProvider extends React.Component { // eslint-disable-line react/p
    * On update props
    * @param nextProps
    */
-  componentWillReceiveProps(nextProps) {
+  // eslint-disable-next-line camelcase
+  UNSAFE_componentWillReceiveProps(nextProps) {
     /**
      * We only replace the theme if the filtered theme is different from the current one
      */
