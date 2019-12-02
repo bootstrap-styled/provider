@@ -264,7 +264,7 @@
     "webpack": "^4.41.2"
   },
   "dependencies": {
-    "@bootstrap-styled/css-mixins": "^2.1.1",
+    "@bootstrap-styled/css-mixins": "^2.1.2",
     "@bootstrap-styled/css-utils": "^1.4.0",
     "bootstrap-styled": "^2.7.0",
     "classnames": "^2.2.6",
