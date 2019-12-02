@@ -23,8 +23,6 @@ import theme from 'bootstrap-styled/lib/theme';
 
 export const defaultProps = {
   theme,
-  utilities: {
-  },
   utils: {
     // v4.4.0 implementation of utilities
     screen: true,
@@ -153,8 +151,8 @@ const UtilityProvider = styled.div`
     props.theme['$zindex-sticky'],
   ))}
     ${ifThen(props.utils.sizing, sizingUtils.getSizingUtilities(props.theme.$sizes))} // eslint-disable-line dot-notation
-    ${ifThen(props.utilities.screen && props.theme.$utilities, screenUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
-    ${ifThen(props.utilities.print && props.theme.$utilities, printUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
+    ${ifThen(props.utils.screen && props.theme.$utilities, screenUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
+    ${ifThen(props.utils.print && props.theme.$utilities, printUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
   `}
 `;
 
