@@ -153,8 +153,8 @@ const UtilityProvider = styled.div`
     props.theme['$zindex-sticky'],
   ))}
     ${ifThen(props.utils.sizing, sizingUtils.getSizingUtilities(props.theme.$sizes))} // eslint-disable-line dot-notation
-    ${ifThen(props.utilities.screen && props.theme.$utilities, screenUtilities(props.theme))}
-    ${ifThen(props.utilities.print && props.theme.$utilities, printUtilities(props.theme))}
+    ${ifThen(props.utilities.screen && props.theme.$utilities, screenUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
+    ${ifThen(props.utilities.print && props.theme.$utilities, printUtilities(props.theme['$grid-breakpoints'], props.theme.$utilities))}
   `}
 `;
 

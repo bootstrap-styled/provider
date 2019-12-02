@@ -23,34 +23,40 @@ export const propTypes = {
   theme: PropTypes.object,
   /** Utilities variables. */
   utils: PropTypes.shape({
-    /** Toggles align theme variables. */
+    /** v4.4.0 implementation for all screen utilities */
+    screen: PropTypes.bool,
+    /** v4.4.0 implementation for all print utilities */
+    print: PropTypes.bool,
+    /** v4.0.0 implementation align theme variables. */
     align: PropTypes.bool,
-    /** Toggles background theme variables. */
+    /** v4.0.0 implementation background theme variables. */
     background: PropTypes.bool,
-    /** Toggles border theme variables. */
+    /** v4.0.0 implementation border theme variables. */
     border: PropTypes.bool,
-    /** Toggles clearfix theme variables. */
-    clearfix: PropTypes.bool,
-    /** Toggles display theme variables. */
+    /** v4.0.0 implementation display theme variables. */
     display: PropTypes.bool,
-    /** Toggles flex theme variables. */
+    /** v4.0.0 implementation flex theme variables. */
     flex: PropTypes.bool,
-    /** Toggles float theme variables. */
+    /** v4.0.0 implementation float theme variables. */
     float: PropTypes.bool,
-    /** Toggles position theme variables. */
+    /** v4.0.0 implementation position theme variables. */
     position: PropTypes.bool,
-    /** Toggles screenreaders theme variables. */
+    /** v4.0.0 implementation screenreaders theme variables. */
     screenreaders: PropTypes.bool,
-    /** Toggles sizing theme variables. */
+    /** v4.0.0 implementation sizing theme variables. */
     sizing: PropTypes.bool,
-    /** Toggles spacing theme variables. */
+    /** v4.0.0 implementation spacing theme variables. */
     spacing: PropTypes.bool,
-    /** Toggles text theme variables. */
+    /** v4.0.0 implementation text theme variables. */
     text: PropTypes.bool,
-    /** Toggles transition theme variables. */
-    transition: PropTypes.bool,
-    /** Toggles visibility theme variables. */
+    /** v4.0.0 implementation  visibility theme variables. */
     visibility: PropTypes.bool,
+    /** add a .clearfix class. */
+    clearfix: PropTypes.bool,
+    /** add cursor utilities. */
+    cursor: PropTypes.bool,
+    /** add transition utilities. */
+    transition: PropTypes.bool,
   }),
 };
 class BootstrapProvider extends React.Component { // eslint-disable-line react/prefer-stateless-function
