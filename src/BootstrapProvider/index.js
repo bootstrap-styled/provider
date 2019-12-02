@@ -27,8 +27,6 @@ export const propTypes = {
     align: PropTypes.bool,
     /** Toggles background theme variables. */
     background: PropTypes.bool,
-    /** Toggles `<A />` link theme variables. */
-    a: PropTypes.bool,
     /** Toggles border theme variables. */
     border: PropTypes.bool,
     /** Toggles clearfix theme variables. */

@@ -128,21 +128,11 @@ import { BootstrapProvider, theme } from 'bootstrap-styled';
 
 ReactDOM.render(
     <BootstrapProvider theme={theme} utils={{
-      align: false,
-      background: false,
-      border: false,
-      clearfix: false,
-      cursor: false,
       display: false,
-      flex: false,
-      float: false,
-      position: false,
-      screenreaders: false,
-      sizing: false,
-      spacing: false,
-      text: false,
+      print: false,
+      clearfix: false,
       transition: false,
-      visibility: false,
+      cursor: false,
     }}>
       <App />
     </BootstrapProvider>

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { screenUtilities, printUtilities } from '@bootstrap-styled/css-utils/lib/_api';
 import { ifThen } from '@bootstrap-styled/css-mixins/lib/conditional';
 import alignUtils from '@bootstrap-styled/css-utils/lib/align';
 import backgroundUtils from '@bootstrap-styled/css-utils/lib/background';
@@ -22,66 +23,79 @@ import theme from 'bootstrap-styled/lib/theme';
 
 export const defaultProps = {
   theme,
+  utilities: {
+  },
   utils: {
-    align: true,
-    background: true,
-    border: true,
+    // v4.4.0 implementation of utilities
+    screen: true,
+    print: true,
+    // v4.0.0 implementation of utilities
+    align: false,
+    background: false,
+    border: false,
+    display: false,
+    flex: false,
+    float: false,
+    position: false,
+    screenreaders: false,
+    sizing: false,
+    spacing: false,
+    text: false,
+    visibility: false,
+    // custom utils
     clearfix: true,
     cursor: true,
-    display: true,
-    flex: true,
-    float: true,
-    position: true,
-    screenreaders: true,
-    sizing: true,
-    spacing: true,
-    text: true,
     transition: true,
-    visibility: true,
   },
 };
+
 export const propTypes = {
   /** Specified node element will be passed as children of `<UtilityProvider />` component. */
   children: PropTypes.node,
   /** Theme variables. */
   theme: PropTypes.object,
-  /** Utilities variables. */
+  /** Utilities variables, all v4.0.0 are now disable variant. If you were relying on the old color scheme, just disable 4.4.0 and enable 4.0.0 variant */
   utils: PropTypes.shape({
-    /** Toggles align theme variables. */
+    /** v4.4.0 implementation for all screen utilities */
+    screen: PropTypes.bool,
+    /** v4.4.0 implementation for all print utilities */
+    print: PropTypes.bool,
+    /** v4.0.0 implementation align theme variables. */
     align: PropTypes.bool,
-    /** Toggles background theme variables. */
+    /** v4.0.0 implementation background theme variables. */
     background: PropTypes.bool,
-    /** Toggles `<A />` link theme variables. */
-    a: PropTypes.bool,
-    /** Toggles border theme variables. */
+    /** v4.0.0 implementation border theme variables. */
     border: PropTypes.bool,
-    /** Toggles clearfix theme variables. */
-    clearfix: PropTypes.bool,
-    /** Toggles display theme variables. */
+    /** v4.0.0 implementation display theme variables. */
     display: PropTypes.bool,
-    /** Toggles flex theme variables. */
+    /** v4.0.0 implementation flex theme variables. */
     flex: PropTypes.bool,
-    /** Toggles float theme variables. */
+    /** v4.0.0 implementation float theme variables. */
     float: PropTypes.bool,
-    /** Toggles position theme variables. */
+    /** v4.0.0 implementation position theme variables. */
     position: PropTypes.bool,
-    /** Toggles screenreaders theme variables. */
+    /** v4.0.0 implementation screenreaders theme variables. */
     screenreaders: PropTypes.bool,
-    /** Toggles sizing theme variables. */
+    /** v4.0.0 implementation sizing theme variables. */
     sizing: PropTypes.bool,
-    /** Toggles spacing theme variables. */
+    /** v4.0.0 implementation spacing theme variables. */
     spacing: PropTypes.bool,
-    /** Toggles text theme variables. */
+    /** v4.0.0 implementation text theme variables. */
     text: PropTypes.bool,
-    /** Toggles transition theme variables. */
-    transition: PropTypes.bool,
-    /** Toggles visibility theme variables. */
+    /** v4.0.0 implementation  visibility theme variables. */
     visibility: PropTypes.bool,
+    /** add a .clearfix class. */
+    clearfix: PropTypes.bool,
+    /** add cursor utilities. */
+    cursor: PropTypes.bool,
+    /** add transition utilities. */
+    transition: PropTypes.bool,
   }),
 };
 
 const UtilityProvider = styled.div`
   ${(props) => `
+    ${ifThen(!props.utilities.screen, console.warn('UtilityProvider: utilities have been replaced in bootstrap 4.4.0, to switch to 4.4.0 behavior, visit @bootstrap-styled/provider documentation') || '')/* eslint-disable-line no-console */}
     ${rebootUtils.body(
     props.theme['$font-family-base'],
     props.theme['$font-size-base'],
@@ -139,6 +153,8 @@ const UtilityProvider = styled.div`
     props.theme['$zindex-sticky'],
   ))}
     ${ifThen(props.utils.sizing, sizingUtils.getSizingUtilities(props.theme.$sizes))} // eslint-disable-line dot-notation
+    ${ifThen(props.utilities.screen && props.theme.$utilities, screenUtilities(props.theme))}
+    ${ifThen(props.utilities.print && props.theme.$utilities, printUtilities(props.theme))}
   `}
 `;
 
