@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/bootstrap-styled/provider/compare/v2.0.0...v2.0.1) (2019-12-02)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies ([4a8eae6](https://github.com/bootstrap-styled/provider/commit/4a8eae602112f773b591d5e3d63ef344631adbb8))
+* **UtilityProvider:** fixing v4.4.0 using wrong props ([59d143a](https://github.com/bootstrap-styled/provider/commit/59d143ad0acb20edf3e8bd2b0d8716f28c7798bd))
+
 # [2.0.0](https://github.com/bootstrap-styled/provider/compare/v1.5.3...v2.0.0) (2019-12-02)
 
 
