@@ -93,7 +93,7 @@ export const propTypes = {
 
 const UtilityProvider = styled.div`
   ${(props) => `
-    ${ifThen(!props.utils.screen, console.warn('UtilityProvider: utilities have been replaced in bootstrap 4.4.0, to switch to 4.4.0 behavior, visit @bootstrap-styled/provider documentation') || '')/* eslint-disable-line no-console */}
+    ${!props.utils.screen ? (console.warn('UtilityProvider: utilities have been replaced in bootstrap 4.4.0, to switch to 4.4.0 behavior, visit @bootstrap-styled/provider documentation') || '') : ''/* eslint-disable-line no-console */}
     ${rebootUtils.body(
     props.theme['$font-family-base'],
     props.theme['$font-size-base'],
