@@ -266,7 +266,7 @@
   "dependencies": {
     "@bootstrap-styled/css-mixins": "^2.1.2",
     "@bootstrap-styled/css-utils": "^1.4.0",
-    "bootstrap-styled": "^2.7.0",
+    "bootstrap-styled": "^2.7.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-transition-group": "^2.5.1"
