@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/bootstrap-styled/provider/compare/v1.5.3...v2.0.0) (2019-12-02)
+
+
+### Features
+
+* **utilities:** update utilities to v4.4.0 ([8cf8216](https://github.com/bootstrap-styled/provider/commit/8cf82165b08e05240692fd28e356560b4b458c99))
+
+
+### BREAKING CHANGES
+
+* **utilities:** deprecate old utilities, they will be removed in futur version. Please now use new
+variant. If necessary, enabled old implementation back as described in the documentation
+* **utilities:** align, background, border, clearfix, display, flex, float, position, screenreaders,
+sizing, spacing, text, visibility are now disabled. display and media have been added and can be
+used to replace. They also migrated the theme colors, so far we keep using $brand-primary for v4
+components, but they now use $primary, etc... names and if you want to get those utilities with the
+proper colors, you will need to use the new naming convention. (in addition of the old naming
+convention until they get removed and unused from v4 and others libs)
+
+re https://github.com/bootstrap-styled/v4/issues/92
+
 ## [1.5.3](https://github.com/bootstrap-styled/provider/compare/v1.5.2...v1.5.3) (2019-09-26)
 
 
