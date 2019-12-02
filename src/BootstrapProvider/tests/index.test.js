@@ -69,6 +69,8 @@ describe('<BootstrapProvider />', () => {
         theme,
         children,
         utils: {
+          screen: true,
+          print: true,
           align: true,
           background: true,
           a: true,
