@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/bootstrap-styled/provider/compare/v2.0.1...v2.0.2) (2019-12-02)
+
+
+### Bug Fixes
+
+* **UtilityProvider:** fixing console warning ([8cf0e67](https://github.com/bootstrap-styled/provider/commit/8cf0e67d26fd16fe0a98b06550733912f7ce34e9))
+
 ## [2.0.1](https://github.com/bootstrap-styled/provider/compare/v2.0.0...v2.0.1) (2019-12-02)
 
 
