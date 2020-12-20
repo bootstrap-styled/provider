@@ -4,8 +4,8 @@
   "description": "BootstrapProvider and UtilityProvider components help you manage reset, global styles and original bootstrap class utilities",
   "main": "lib/index.js",
   "homepage": "https://bootstrap-styled.github.io/provider",
-  "jsnext:main": "dist/@bootstrap-styled/provider.es.js",
-  "module": "dist/@bootstrap-styled/provider.es.js",
+  "jsnext:main": "dist/@bootstrap-styled/provider.esm.js",
+  "module": "dist/@bootstrap-styled/provider.esm.js",
   "engines": {
     "node": ">=8"
   },
