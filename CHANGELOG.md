@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/bootstrap-styled/provider/compare/v2.0.2...v2.0.3) (2020-12-20)
+
+
+### Bug Fixes
+
+* fix incorrect name of es module in package ([dd295ac](https://github.com/bootstrap-styled/provider/commit/dd295acda752356e792f58c43c5bb611a3351abb))
+* remove extra blank line ([27904a6](https://github.com/bootstrap-styled/provider/commit/27904a6a95b53bd9cc9d00ab5ebc60536b7fdccd))
+
 ## [2.0.2](https://github.com/bootstrap-styled/provider/compare/v2.0.1...v2.0.2) (2019-12-02)
 
 
