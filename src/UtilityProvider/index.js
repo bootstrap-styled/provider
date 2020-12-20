@@ -20,7 +20,6 @@ import transitionUtils from '@bootstrap-styled/css-utils/lib/transition';
 import visibilityUtils from '@bootstrap-styled/css-utils/lib/visibility';
 import theme from 'bootstrap-styled/lib/theme';
 
-
 export const defaultProps = {
   theme,
   utils: {
